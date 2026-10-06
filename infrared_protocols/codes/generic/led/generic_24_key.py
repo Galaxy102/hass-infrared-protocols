@@ -1,20 +1,12 @@
-"""Command codes for Tween Light LED Strip.
+"""Command codes for generic 24-key LED remote control."""
 
-Tween light is a brand marketed by the european home improvement retail chain BAUHAUS.
-The LED strip comes with a 24-key remote control, which is also sold with many other
-no-name LED controllers.
-
-https://www.bauhaus.info/led-streifen/tween-light-led-band/p/30293612
-"""
-
-from enum import IntEnum
-
-from ...commands import Command
-from ...commands.nec import NECCommand
+from ....commands import Command
+from ....commands.nec import NECCommand
+from .base import BaseGenericLEDCode
 
 
-class TweenLightLEDStripCode(IntEnum):
-    """Tween Light LED Strip IR command codes."""
+class Generic24KeyCode(BaseGenericLEDCode):
+    """Generic 24-key LED remote control IR command codes."""
 
     ON = 0x03
     OFF = 0x02
